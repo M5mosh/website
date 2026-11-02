@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M5mOsH AI Gateway</title>
+  <meta name="description" content="M5mOsH AI Gateway — premium AI platform and intelligent automation." />
+  <style>
+    :root { --bg: #07131d; --panel: #0d1b2a; --card: #12263b; --text: #ebf5ff; --muted: #a8bfd3; --accent: #74d9ff; --violet: #8b7cff; --green: #79ebc6; --line: #223d57; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: radial-gradient(circle at top, #0b1c2d, #07131d 60%); color: var(--text); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(7,19,29,.85); border-bottom: 1px solid rgba(255,255,255,.06); backdrop-filter: blur(10px); }
+    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 76px; }
+    .brand { font-size: 1.8rem; font-weight: 900; letter-spacing: .05em; }
+    .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+    .btn { display: inline-block; padding: 14px 24px; border-radius: 999px; font-weight: 700; transition: .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--violet)); color: #07131d; }
+    .btn-secondary { background: transparent; border: 1px solid var(--line); color: var(--text); }
+    .hero { padding: 92px 0 70px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 34px; align-items: center; }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 12px 0 16px; font-size: clamp(2.7rem,5vw,5rem); line-height: 1.06; }
+    .lead { font-size: 1.14rem; color: var(--muted); }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .panel { background: linear-gradient(180deg, #12263b, #0d1b2a); border: 1px solid var(--line); border-radius: 26px; padding: 28px; box-shadow: 0 25px 60px rgba(0,0,0,.2); }
+    .mini { background: rgba(116,217,255,.08); border: 1px solid rgba(116,217,255,.28); border-radius: 15px; padding: 16px 18px; margin-bottom: 12px; }
+    section { padding: 72px 0; }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(2rem,4vw,3rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .feature { background: rgba(18,38,59,.9); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+    .feature-icon { font-size: 2.6rem; margin-bottom: 10px; }
+    .feature h3 { margin: 0 0 8px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat { padding: 22px; border-radius: 18px; border: 1px solid var(--line); background: linear-gradient(180deg, #11263b, #0d1b2a); text-align: center; }
+    .stat strong { display: block; font-size: 2rem; color: var(--accent); }
+    .cta-box { background: linear-gradient(135deg, #0d1b2a, #1b3555); border: 1px solid var(--line); border-radius: 26px; padding: 40px; text-align: center; }
+    .cta-box h2 { margin: 10px 0 8px; font-size: clamp(2rem,4vw,3rem); }
+    .cta-box p { max-width: 760px; margin: 0 auto 18px; color: var(--muted); }
+    footer { background: #0a121a; color: #dfeaf7; padding: 28px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    @media (max-width:800px) { .hero-grid, .features, .stats { grid-template-columns: 1fr; } .nav-links { display: none; } .brand { font-size: 1.4rem; } .footer-grid { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">M5mOsH</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#platform">Platform</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">Launch Platform</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">AI Infrastructure</div>
+          <h1>Intelligence that powers execution.</h1>
+          <p class="lead">M5mOsH AI Gateway is a premium platform foundation for automation, service orchestration, and intelligent product growth.</p>
+          <div class="cta-row"><a class="btn btn-primary" href="#features">Explore Features</a><a class="btn btn-secondary" href="#about">Why M5mOsH</a></div>
+        </div>
+        <div class="panel">
+          <div class="mini"><strong>Platform</strong><br>M5mOsH AI Gateway</div>
+          <div class="mini"><strong>Core</strong><br>Service routing and AI orchestration</div>
+          <div class="mini"><strong>Ready for</strong><br>Global-scale product systems</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head"><h2>Built for modern AI systems</h2><p>High-performance infrastructure for the next wave of digital products.</p></div>
+        <div class="features">
+          <div class="feature"><div class="feature-icon">⚡</div><h3>Fast deployment</h3><p>Ship AI capabilities quickly with a clean and scalable foundation.</p></div>
+          <div class="feature"><div class="feature-icon">🔗</div><h3>Service orchestration</h3><p>Connect tools, APIs, and workflows through a unified digital layer.</p></div>
+          <div class="feature"><div class="feature-icon">📊</div><h3>Operational insight</h3><p>Track health, route traffic, and improve performance by design.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform">
+      <div class="container"><div class="stats"><div class="stat"><strong>24/7</strong><span>Monitoring</span></div><div class="stat"><strong>API</strong><span>First architecture</span></div><div class="stat"><strong>AI</strong><span>Ready workflows</span></div><div class="stat"><strong>∞</strong><span>Scale path</span></div></div></div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><h2>Why M5mOsH</h2><p>We turn ambitious ideas into structured digital execution.</p></div>
+        <div class="panel"><p style="margin:0;color:var(--muted);">M5mOsH AI Gateway is designed to help teams build smarter systems and scale them with confidence, from concept to production.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container"><div class="cta-box"><div class="eyebrow" style="color: var(--green);">Ready to build</div><h2>Build smarter systems for tomorrow.</h2><p>Launch a product foundation designed for AI-powered execution and business scalability.</p><a class="btn btn-primary" href="mailto:hello@m5mosh-ai-gateway.example">hello@m5mosh-ai-gateway.example</a></div></div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-grid"><div><strong>M5mOsH AI Gateway</strong><br><span>Automation • AI • Platform</span></div><div>© 2026</div></div></footer>
+</body>
+</html>

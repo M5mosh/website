@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alshmry</title>
+  <meta name="description" content="Alshmry — premium lighting and décor brand." />
+  <style>
+    :root { --bg: #f8f4ee; --card: #fff; --ink: #1d1a17; --muted: #665f59; --gold: #c89d64; --deep: #251d18; --line: #e6dcc1; --soft: #f4e9d8; --primary: #b57d46; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Tahoma, Arial, sans-serif; background: linear-gradient(180deg, #f8f4ee, #f2eada); color: var(--ink); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(28,22,18,.96); border-bottom: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(10px); }
+    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 76px; }
+    .brand { font-size: 1.9rem; font-weight: 900; color: #fff; }
+    .nav-links { display: flex; gap: 22px; color: #f5eee5; font-size: 14px; }
+    .btn { display: inline-block; padding: 14px 24px; border-radius: 999px; font-weight: 700; transition: .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, #f1d19b, #b57f45); color: #1a130d; }
+    .btn-secondary { background: #fff; border: 1px solid var(--line); color: var(--ink); }
+    .hero { padding: 94px 0 60px; background: radial-gradient(circle at top, #f7ebdc, #f3eee6 46%, #eedec2 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 34px; align-items: center; }
+    .eyebrow { color: #9f6935; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    h1 { margin: 12px 0 18px; font-size: clamp(2.6rem, 5vw, 4.7rem); line-height: 1.08; }
+    .lead { font-size: 1.15rem; color: var(--muted); }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .hero-card { background: linear-gradient(135deg, #231c18, #6a472e); color: #fff; border-radius: 26px; padding: 30px; box-shadow: 0 25px 60px rgba(0,0,0,.2); }
+    .hero-visual { text-align: center; font-size: 120px; }
+    section { padding: 72px 0; }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(2rem,4vw,3rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .product { background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 12px 25px rgba(17,12,7,.04); }
+    .product-visual { height: 180px; display: grid; place-items: center; font-size: 72px; background: linear-gradient(135deg, #f3e2c4, #d4a660); }
+    .product-body { padding: 22px; }
+    .product-body h3 { margin: 0 0 10px; }
+    .product-body p { margin: 0; color: var(--muted); }
+    .price { display: inline-block; margin-top: 16px; font-weight: 800; color: var(--primary); font-size: 1.5rem; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .feature { background: rgba(255,255,255,.75); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .feature h3 { margin: 0 0 8px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat { background: linear-gradient(180deg, #fff, #f8f0e8); border: 1px solid var(--line); border-radius: 18px; padding: 22px; text-align: center; }
+    .stat strong { display: block; font-size: 2rem; color: var(--primary); }
+    .about { background: #fff; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: center; }
+    .list { padding: 0; margin: 18px 0 0; list-style: none; }
+    .list li { padding: 12px 0; border-bottom: 1px solid #eee; }
+    .cta-box { background: linear-gradient(135deg, #1d1713, #583e29); color: #fff; border-radius: 28px; padding: 40px; text-align: center; }
+    .cta-box h2 { margin: 10px 0 8px; font-size: clamp(2rem, 4vw, 3rem); }
+    .cta-box p { max-width: 760px; margin: 0 auto 20px; color: rgba(255,255,255,.8); }
+    footer { background: #171717; color: #ddd; padding: 28px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    @media (max-width:800px) { .hero-grid, .products, .features, .stats, .about-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .brand { font-size: 1.45rem; } .footer-grid { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Alshmry</div>
+      <nav class="nav-links">
+        <a href="#products">المنتجات</a>
+        <a href="#features">المزايا</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">احصل على عرض</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Premium Lighting & Décor</div>
+          <h1>الإضاءة الفاخرة تبدأ هنا</h1>
+          <p class="lead">Alshmry يقدم حلول إضاءة وديكور أنيقة تزود كل مساحة دفئها وأناقتها، وتمنحها طابعاً فاخراً وراحة يومية.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#products">تسوق الآن</a>
+            <a class="btn btn-secondary" href="#about">علامتنا</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-visual">💡</div>
+          <h3 style="margin:0 0 8px;">Warm Luxury</h3>
+          <p style="margin:0;color:rgba(255,255,255,.8);">منتجات ديكور وإضاءة مصممة لإضفاء الراحة والأناقة على كل جزء من المنزل.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head"><h2>منتجاتنا المميزة</h2><p>مجموعة مختارة بعناية لتليق بنمط حياتك.</p></div>
+        <div class="products">
+          <article class="product"><div class="product-visual">🪔</div><div class="product-body"><h3>مصباح فاخر</h3><p>إضاءة ناعمة تعكس الراحة في كل زاوية.</p><span class="price">899 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">🏡</div><div class="product-body"><h3>مجموعة منزلية</h3><p>قطع ديكور أنيقة تمنح البيت طابعاً فاخراً.</p><span class="price">1,199 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">✨</div><div class="product-body"><h3>إضاءة مميزة</h3><p>أسلوب فني يضفي أجواء دافئة ومشرقة.</p><span class="price">749 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">🔆</div><div class="product-body"><h3>إضاءة ذكية</h3><p>حلول حديثة تقدم ميزات متقدمة وراحة عالية.</p><span class="price">1,399 ر.س</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head"><h2>لماذا ألشمري؟</h2><p>جودة فاخرة، ورسالة بصرية متوازنة.</p></div>
+        <div class="features">
+          <div class="feature"><div class="feature-icon">🎯</div><h3>توجيه ذكي</h3><p>نرشّح لك أفضل الخيارات بحسب المساحة ونوعية الإضاءة.</p></div>
+          <div class="feature"><div class="feature-icon">🏆</div><h3>اختيار فاخر</h3><p>نختار لك المنتجات الأنسب من حيث الجودة والستايل.</p></div>
+          <div class="feature"><div class="feature-icon">🚚</div><h3>خدمة سريعة</h3><p>تسليم موثوق ودعم مستمر بعد الشراء.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><strong>2.5k+</strong><span>طلبات</span></div>
+          <div class="stat"><strong>150+</strong><span>منتجات</span></div>
+          <div class="stat"><strong>48h</strong><span>تسليم سريع</span></div>
+          <div class="stat"><strong>4.9/5</strong><span>تقييمات</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">About Us</div>
+          <h2>مساحات أنيقة، ومزاج هادئ ومشرق.</h2>
+          <p style="color: var(--muted);">نؤمن بأن الراحة المنزلية تبدأ من الإضاءة المناسبة، وهذا ما يميز مساحة الحياة اليومية.</p>
+          <ul class="list"><li>استشارات ديكور</li><li>إضاءة منزلية ومهنية</li><li>منتجات فاخرة ومصممة بعناية</li></ul>
+        </div>
+        <div class="hero-card"><h3 style="margin-top:0;">إضاءة عصرية</h3><p style="margin-bottom:18px;color:rgba(255,255,255,.8);">نساعدك على خلق أجواء هادئة، دافئة، ومميزة في كل جزء من المساحة.</p><a class="btn btn-primary" href="#contact">استشرنا</a></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container"><div class="cta-box"><div class="eyebrow" style="color:#f5d8a9;">ابدأ مشروعك الآن</div><h2>دع منزلك يلمع بأناقة</h2><p>لنساعدك في اختيار إضاءة مناسبة وديكور فاخر يليق بأسلوبك.</p><a class="btn btn-primary" href="mailto:hello@alshmry.example">hello@alshmry.example</a></div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid"><div><strong>Alshmry</strong><br><span>Lighting & Décor</span></div><div>© 2026</div></div>
+  </footer>
+</body>
+</html>

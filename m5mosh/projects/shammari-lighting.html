@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shammari Lighting</title>
+  <meta name="description" content="Shammari Lighting — premium lighting and home décor brand." />
+  <style>
+    :root {
+      --bg: #f8f3ee; --card: #fff; --ink: #1c1714; --muted: #655c57; --gold: #c99a60; --deep: #171515;
+      --line: #ebdcc8; --soft: #f4e7d6; --primary: #b4864f;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Tahoma, Arial, sans-serif; background: linear-gradient(180deg, #f8f3ee, #f1e7d9);
+      color: var(--ink); line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+    header {
+      position: sticky; top: 0; z-index: 40; background: rgba(22,18,15,.96);
+      border-bottom: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(10px);
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 76px; }
+    .brand { color: #fff; font-size: 1.8rem; font-weight: 900; }
+    .nav-links { display: flex; gap: 22px; color: #f3efe8; font-size: 14px; }
+    .btn {
+      display: inline-block; padding: 14px 24px; border-radius: 999px; font-weight: 700;
+      transition: .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, #dfbb7e, #a86935); color: #190f0a; }
+    .btn-secondary { background: #fff; border: 1px solid var(--line); color: var(--ink); }
+    .hero { padding: 84px 0 60px; background: radial-gradient(circle at top, #f7efe4, #f3ede7 44%, #ebdac0 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 32px; align-items: center; }
+    .eyebrow { color: var(--primary); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 14px 0 14px; font-size: clamp(2.7rem, 5vw, 4.8rem); line-height: 1.08; }
+    .lead { color: var(--muted); font-size: 1.12rem; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .hero-card { background: linear-gradient(135deg, #171717, #33271d); color: #fff; border-radius: 28px; padding: 30px; box-shadow: 0 25px 60px rgba(0,0,0,.18); }
+    .hero-visual { text-align: center; font-size: 120px; }
+    section { padding: 72px 0; }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 3rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .product {
+      background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
+      box-shadow: 0 12px 25px rgba(25,15,10,.03);
+    }
+    .product-visual { height: 180px; display: grid; place-items: center; font-size: 72px; background: linear-gradient(135deg, #f2e5d0, #d4a86c); }
+    .product-body { padding: 22px; }
+    .product-body h3 { margin: 0 0 10px; }
+    .product-body p { margin: 0; color: var(--muted); }
+    .price { display: inline-block; margin-top: 16px; font-weight: 800; color: var(--primary); font-size: 1.4rem; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .feature { background: rgba(255,255,255,.75); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .feature h3 { margin: 0 0 8px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat { background: linear-gradient(180deg, #fff, #f9f1e8); border: 1px solid var(--line); border-radius: 18px; padding: 22px; text-align: center; }
+    .stat strong { display: block; font-size: 2rem; color: var(--primary); }
+    .about { background: #fff; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: center; }
+    .list { padding: 0; margin: 18px 0 0; list-style: none; }
+    .list li { padding: 12px 0; border-bottom: 1px solid #eee; }
+    .cta-box {
+      background: linear-gradient(135deg, #171717, #4b372a); color: #fff; border-radius: 28px;
+      padding: 40px; text-align: center;
+    }
+    .cta-box h2 { margin: 12px 0 10px; font-size: clamp(2rem,4vw,3rem); }
+    .cta-box p { max-width: 760px; margin: 0 auto 20px; color: rgba(255,255,255,.8); }
+    footer { background: #171717; color: #ddd; padding: 28px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    @media (max-width: 800px) {
+      .hero-grid, .products, .features, .stats, .about-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .brand { font-size: 1.45rem; }
+      .footer-grid { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">الشمري</div>
+      <nav class="nav-links">
+        <a href="#products">المنتجات</a>
+        <a href="#features">المزايا</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">احجز استشارة</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Premium Lighting & Decor</div>
+          <h1>إضاءة تصنع الفرق في كل مساحة</h1>
+          <p class="lead">متجر عربي متخصص في الإضاءة والديكور المنزلي، يقدّم هوية فاخرة وتجربة شراء أنيقة ومميزة.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#products">تصفح المجموعة</a>
+            <a class="btn btn-secondary" href="#about">قصتنا</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-visual">💡</div>
+          <h3 style="margin: 0 0 8px;">Designer Elegance</h3>
+          <p style="margin: 0; color: rgba(255,255,255,.8);">حلول إضاءة وديكور تناسب المنازل الفاخرة والمكاتب الراقية.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head">
+          <h2>المنتجات المميزة</h2>
+          <p>مصممة لتليق بأسلوب حياتك وأجواء منزلك.</p>
+        </div>
+        <div class="products">
+          <article class="product"><div class="product-visual">🛋️</div><div class="product-body"><h3>مصباح أرضي فاخر</h3><p>إضاءة أنيقة تناسب غرف المعيشة والجلوس.</p><span class="price">899 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">💡</div><div class="product-body"><h3>مصباح سقفي ديكوري</h3><p>إضاءة فاخرة للمداخل والغرف والمكاتب.</p><span class="price">1,299 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">✨</div><div class="product-body"><h3>مصباح جداري</h3><p>إضاءة ناعمة تضيف لمسة دافئة للمنزل.</p><span class="price">749 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">🏠</div><div class="product-body"><h3>مجموعة ديكور</h3><p>قطع متكاملة لإضفاء طابع فاخر على المساحة.</p><span class="price">1,599 ر.س</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head"><h2>لماذا نحن؟</h2><p>جودة، تفاصيل، وتجربة شراء متكاملة.</p></div>
+        <div class="features">
+          <div class="feature"><div class="feature-icon">🏆</div><h3>جودة فاخرة</h3><p>كل منتج مختار بعناية ليمنح منزلك طابعاً أنيقاً وراقياً.</p></div>
+          <div class="feature"><div class="feature-icon">🎯</div><h3>استشارة مخصصة</h3><p>نرشّدك إلى أفضل الخيارات حسب مساحة منزلك وطبيعة الإضاءة.</p></div>
+          <div class="feature"><div class="feature-icon">🚚</div><h3>توصيل سريع</h3><p>خدمة سريعة وشحن موثوق لضمان راحة العميل.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><strong>5k+</strong><span>عملاء راضون</span></div>
+          <div class="stat"><strong>320+</strong><span>منتج فاخر</span></div>
+          <div class="stat"><strong>48h</strong><span>تسليم سريع</span></div>
+          <div class="stat"><strong>4.9/5</strong><span>تقييم العملاء</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">Our Story</div>
+          <h2>البيئات الجميلة تبدأ بالإضاءة المناسبة.</h2>
+          <p style="color: var(--muted);">نخلق مساحات أنيقة وعصرية من خلال إضاءة مميزة وديكور متوازن يعكس ذوق العميل وراحة الحياة اليومية.</p>
+          <ul class="list">
+            <li>استشارات تصميم الإضاءة</li>
+            <li>اختيار القطع المناسبة لكل غرفة</li>
+            <li>حلول دائمة ومتكاملة للمنزل والمكتب</li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <h3 style="margin-top: 0;">خدمة احترافية</h3>
+          <p style="margin-bottom: 18px; color: rgba(255,255,255,.8);">نساعدك على اختيار الإضاءة المناسبة للغرفة، المساحة، وطابع حياتك.</p>
+          <a class="btn btn-primary" href="#contact">اطلب عرض السعر</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <div class="eyebrow" style="color: #f4d5a3;">ابدأ مشروعك الآن</div>
+          <h2>قل لنا عن مساحتك وسندير لك إضاءة فاخرة</h2>
+          <p>نقدم لك نصيحة مخصصة ومجموعة منتجات تناسب أسلوبك وميزانيتك.</p>
+          <a class="btn btn-primary" href="mailto:hello@shammari-lighting.example">hello@shammari-lighting.example</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>الشمري للإضاءة والديكور</strong><br><span>Premium Lighting & Decor</span></div>
+      <div>© 2026</div>
+    </div>
+  </footer>
+</body>
+</html>

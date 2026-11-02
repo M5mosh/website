@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M5mOsH Core</title>
+  <meta name="description" content="M5mOsH Core — challenge-driven innovation platform." />
+  <style>
+    :root { --bg: #0b1220; --panel: #101d2d; --card: #13233a; --text: #edf6ff; --muted: #a7bfd1; --accent: #7dd7ff; --violet: #8d7cff; --green: #7ce1ba; --line: #263e59; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: linear-gradient(180deg, #0b1220, #112131 100%); color: var(--text); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(11,18,32,.85); border-bottom: 1px solid rgba(255,255,255,.06); backdrop-filter: blur(8px); }
+    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 76px; }
+    .brand { font-size: 1.8rem; font-weight: 900; letter-spacing: .03em; }
+    .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+    .btn { display: inline-block; padding: 14px 24px; border-radius: 999px; font-weight: 700; transition: .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--violet)); color: #07131d; }
+    .btn-secondary { background: transparent; border: 1px solid var(--line); color: var(--text); }
+    .hero { padding: 96px 0 68px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 34px; align-items: center; }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 12px 0 18px; font-size: clamp(2.7rem,5vw,4.9rem); line-height: 1.08; }
+    .lead { font-size: 1.14rem; color: var(--muted); }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .panel { background: linear-gradient(180deg, #13233a, #101d2d); border: 1px solid var(--line); border-radius: 26px; padding: 28px; box-shadow: 0 25px 60px rgba(0,0,0,.18); }
+    .mini { background: rgba(125,215,255,.08); border: 1px solid rgba(125,215,255,.32); border-radius: 15px; padding: 16px 18px; margin-bottom: 12px; }
+    section { padding: 72px 0; }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(2rem,4vw,3rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .feature { background: rgba(19,35,58,.9); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .feature h3 { margin: 0 0 8px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat { padding: 22px; border-radius: 18px; border: 1px solid var(--line); background: linear-gradient(180deg, #13233a, #0d1826); text-align: center; }
+    .stat strong { display: block; font-size: 2rem; color: var(--accent); }
+    .cta-box { background: linear-gradient(135deg, #101d2d, #1d3554); border: 1px solid var(--line); border-radius: 26px; padding: 40px; text-align: center; }
+    .cta-box h2 { margin: 10px 0 8px; font-size: clamp(2rem,4vw,3rem); }
+    .cta-box p { max-width: 760px; margin: 0 auto 18px; color: var(--muted); }
+    footer { background: #0a121b; color: #d9e7f3; padding: 28px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    @media (max-width:800px) { .hero-grid, .features, .stats { grid-template-columns: 1fr; } .nav-links { display: none; } .brand { font-size: 1.4rem; } .footer-grid { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">M5mOsH Core</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">Explore</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Challenge-driven growth</div>
+          <h1>Build ideas, review clearly, scale faster.</h1>
+          <p class="lead">M5mOsH Core is a strategic project ecosystem for challenge-led innovation, structured workflows, and measurable execution.</p>
+          <div class="cta-row"><a class="btn btn-primary" href="#features">Discover Features</a><a class="btn btn-secondary" href="#workflow">Workflow</a></div>
+        </div>
+        <div class="panel">
+          <div class="mini"><strong>Focus</strong><br>Challenge-led innovation</div>
+          <div class="mini"><strong>Method</strong><br>Workflow, review, and clarity</div>
+          <div class="mini"><strong>Outcome</strong><br>Strong execution and delivery</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head"><h2>Core capabilities</h2><p>Built to create momentum and align teams around outcomes.</p></div>
+        <div class="features">
+          <div class="feature"><div class="feature-icon">🧭</div><h3>Project vision</h3><p>Clear direction from concept to production-ready execution.</p></div>
+          <div class="feature"><div class="feature-icon">📋</div><h3>Review culture</h3><p>Structured checkpoints and quality standards that reduce noise.</p></div>
+          <div class="feature"><div class="feature-icon">🤝</div><h3>Collaboration</h3><p>Shared execution models that turn teams into a system.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <div class="container"><div class="stats"><div class="stat"><strong>01</strong><span>Read</span></div><div class="stat"><strong>02</strong><span>Define</span></div><div class="stat"><strong>03</strong><span>Build</span></div><div class="stat"><strong>04</strong><span>Review</span></div></div></div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><h2>Why this matters</h2><p>Execution quality improves when process, review, and strategy are connected.</p></div>
+        <div class="panel"><p style="margin:0;color:var(--muted);">M5mOsH Core creates the operating model for teams seeking stronger execution, clearer review, and a more scalable path from idea to outcome.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container"><div class="cta-box"><div class="eyebrow" style="color: var(--green);">Launch your next challenge</div><h2>Turn ideas into scalable outcomes.</h2><p>Build stronger systems with better planning, review, and delivery structure.</p><a class="btn btn-primary" href="mailto:hello@m5mosh-core.example">hello@m5mosh-core.example</a></div></div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-grid"><div><strong>M5mOsH Core</strong><br><span>Innovation • Workflow • Growth</span></div><div>© 2026</div></div></footer>
+</body>
+</html>

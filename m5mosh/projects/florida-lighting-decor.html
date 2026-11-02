@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florida Lighting & Decor</title>
+  <meta name="description" content="Florida Lighting & Decor — warm elegance and premium interior lighting." />
+  <style>
+    :root {
+      --bg: #f7f2ed; --card: #fff; --ink: #1b1815; --muted: #665d57; --gold: #c99859; --deep: #2a1f1a; --line: #eadcc7; --soft: #f1e4d2; --primary: #b78348;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Tahoma, Arial, sans-serif; background: linear-gradient(180deg, #f7f2ed, #f0e8e1); color: var(--ink); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(29,24,20,.96); border-bottom: 1px solid rgba(255,255,255,.06); backdrop-filter: blur(10px); }
+    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 76px; }
+    .brand { font-size: 1.9rem; font-weight: 900; color: #fff; }
+    .nav-links { display: flex; gap: 22px; color: #f7efe7; font-size: 14px; }
+    .btn { display: inline-block; padding: 14px 24px; border-radius: 999px; font-weight: 700; transition: .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, #f2d19a, #b78349); color: #18110d; }
+    .btn-secondary { background: #fff; border: 1px solid var(--line); color: var(--ink); }
+    .hero { padding: 90px 0 60px; background: radial-gradient(circle at top, #f7eedf, #f3eadc 44%, #e8d5b6 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 34px; align-items: center; }
+    .eyebrow { color: #a96d34; font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+    h1 { margin: 12px 0 18px; font-size: clamp(2.6rem, 5vw, 4.8rem); line-height: 1.08; }
+    .lead { font-size: 1.15rem; color: var(--muted); }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .hero-card { background: linear-gradient(135deg, #301d17, #705033); color: #fff; border-radius: 26px; padding: 30px; box-shadow: 0 25px 60px rgba(0,0,0,.2); }
+    .hero-visual { text-align: center; font-size: 120px; }
+    section { padding: 72px 0; }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 3rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .product { background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 12px 25px rgba(17,12,7,.04); }
+    .product-visual { height: 180px; display: grid; place-items: center; font-size: 72px; background: linear-gradient(135deg, #efdcb3, #d9ad72); }
+    .product-body { padding: 22px; }
+    .product-body h3 { margin: 0 0 10px; }
+    .product-body p { margin: 0; color: var(--muted); }
+    .price { display: inline-block; margin-top: 16px; font-weight: 800; color: var(--primary); font-size: 1.5rem; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .feature { background: rgba(255,255,255,.75); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .feature h3 { margin: 0 0 8px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat { background: linear-gradient(180deg, #fff, #f8f1ea); border: 1px solid var(--line); border-radius: 18px; padding: 22px; text-align: center; }
+    .stat strong { display: block; font-size: 2rem; color: var(--primary); }
+    .about { background: #fff; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: center; }
+    .list { padding: 0; margin: 18px 0 0; list-style: none; }
+    .list li { padding: 12px 0; border-bottom: 1px solid #eee; }
+    .cta-box { background: linear-gradient(135deg, #1d1713, #4a3429); color: #fff; border-radius: 28px; padding: 40px; text-align: center; }
+    .cta-box h2 { margin: 10px 0 8px; font-size: clamp(2rem, 4vw, 3rem); }
+    .cta-box p { max-width: 760px; margin: 0 auto 20px; color: rgba(255,255,255,.8); }
+    footer { background: #171717; color: #ddd; padding: 28px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    @media (max-width:800px) { .hero-grid, .products, .features, .stats, .about-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .brand { font-size: 1.45rem; } .footer-grid { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">فلوريدا</div>
+      <nav class="nav-links">
+        <a href="#products">المنتجات</a>
+        <a href="#features">المزايا</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">احجز استشارة</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Lighting & Home Décor</div>
+          <h1>نجعل كل غرفة تبدو أنيقة وملهمة</h1>
+          <p class="lead">فلوريدا للإضاءة والديكور تقدم حلول إضاءة وديكور أنيقة تعكس الراحة، الذوق الرفيع، والهوية الفاخرة للمساحات الداخلية.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#products">استعرض المجموعة</a>
+            <a class="btn btn-secondary" href="#about">علامتنا</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-visual">🏠</div>
+          <h3 style="margin:0 0 8px;">Luxury Living</h3>
+          <p style="margin:0;color:rgba(255,255,255,.8);">إضاءة وديكور مصمم ليمنح كل مساحة دفئها وأناقتها.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head"><h2>أفضل المنتجات</h2><p>حلول فاخرة تجمع بين الجودة والراحة البصرية.</p></div>
+        <div class="products">
+          <article class="product"><div class="product-visual">💡</div><div class="product-body"><h3>شمعدان فاخر</h3><p>إضاءة فخمة للمنازل والمكاتب الراقية.</p><span class="price">1,799 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">🪑</div><div class="product-body"><h3>قطع ديكور</h3><p>ملمس أنيق يضيف طابعاً مميزاً لكل غرفة.</p><span class="price">999 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">✨</div><div class="product-body"><h3>إضاءة جدارية</h3><p>إضاءة هادئة تمنح الجو مظهراً أنيقاً ومريحاً.</p><span class="price">699 ر.س</span></div></article>
+          <article class="product"><div class="product-visual">🔆</div><div class="product-body"><h3>حزمة إضاءة ذكية</h3><p>تجربة إضاءة حديثة مع لمسة فاخرة وموفرة للطاقة.</p><span class="price">1,299 ر.س</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head"><h2>لماذا فلوريدا؟</h2><p>هوية عصرية، جودة عالية، وتجربة راقية.</p></div>
+        <div class="features">
+          <div class="feature"><div class="feature-icon">🎨</div><h3>تصميم موجه</h3><p>مزيج بين الراحة والهوية البصرية الفاخرة.</p></div>
+          <div class="feature"><div class="feature-icon">🛠️</div><h3>اختيار احترافي</h3><p>نختار لك أفضل المنتجات المناسبة لمساحة منزلك.</p></div>
+          <div class="feature"><div class="feature-icon">🚚</div><h3>توصيل سريع</h3><p>معالجة سريعة لتجربة شراء مريحة وموثوقة.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><strong>3k+</strong><span>طلبات مكتملة</span></div>
+          <div class="stat"><strong>240+</strong><span>اختيارات فاخرة</span></div>
+          <div class="stat"><strong>2-5d</strong><span>تسليم سريع</span></div>
+          <div class="stat"><strong>4.9</strong><span>تقييم العملاء</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">Our Value</div>
+          <h2>مساحات راقية، مصممة باهتمام.</h2>
+          <p style="color: var(--muted);">نؤمن بأن كل مساحة deserve a refined atmosphere خاصة عندما تكون الإضاءة مناسبة وتكمل أسلوب الديكور وتجعله متوازنًا.</p>
+          <ul class="list"><li>استشارات ديكور وإضاءة</li><li>حلول منزلية ومكتبية</li><li>تجهيزات حسب ذوق العميل</li></ul>
+        </div>
+        <div class="hero-card"><h3 style="margin-top:0;">للمساحات الفاخرة</h3><p style="margin-bottom:18px;color:rgba(255,255,255,.8);">نساعدك في بناء أجواء مريحة، أنيقة، وتعكس شخصيتك.</p><a class="btn btn-primary" href="#contact">اطلب عرض السعر</a></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container"><div class="cta-box"><div class="eyebrow" style="color:#f5d9b0;">ابدأ تصميم منزلك</div><h2>دع منزلك يلمع بأناقة</h2><p>نساعدك في اختيار أفضل إضاءة وقطع الديكور المناسبة لمساحتك الداخلية.</p><a class="btn btn-primary" href="mailto:hello@florida-lighting.example">hello@florida-lighting.example</a></div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid"><div><strong>فلوريدا للإضاءة والديكور</strong><br><span>Luxury Lighting & Decor</span></div><div>© 2026</div></div>
+  </footer>
+</body>
+</html>
